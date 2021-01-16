@@ -1,0 +1,44 @@
+﻿@model NandaYudhaP_004_UASPAW.Models.RekapKeuntungan
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>RekapKeuntungan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdRekap" />
+            <div class="form-group">
+                <label asp-for="TotalPemasukan" class="control-label"></label>
+                <input asp-for="TotalPemasukan" class="form-control" />
+                <span asp-validation-for="TotalPemasukan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laba" class="control-label"></label>
+                <input asp-for="Laba" class="form-control" />
+                <span asp-validation-for="Laba" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bulan" class="control-label"></label>
+                <input asp-for="Bulan" class="form-control" />
+                <span asp-validation-for="Bulan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

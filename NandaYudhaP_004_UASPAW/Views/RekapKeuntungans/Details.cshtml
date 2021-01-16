@@ -1,0 +1,36 @@
+﻿@model NandaYudhaP_004_UASPAW.Models.RekapKeuntungan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RekapKeuntungan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPemasukan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalPemasukan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Laba)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Laba)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bulan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bulan)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdRekap">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

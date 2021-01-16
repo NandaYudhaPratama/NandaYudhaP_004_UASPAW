@@ -1,0 +1,30 @@
+﻿@model NandaYudhaP_004_UASPAW.Models.TarifParkir
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TarifParkir</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JenisKendaraan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JenisKendaraan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Harga)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Harga)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdTarif">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

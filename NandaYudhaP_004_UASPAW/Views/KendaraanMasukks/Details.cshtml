@@ -1,0 +1,30 @@
+﻿@model NandaYudhaP_004_UASPAW.Models.KendaraanMasukk
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KendaraanMasukk</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NoPolisi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoPolisi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JenisKendaraan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JenisKendaraan)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdParkir">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
